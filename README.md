@@ -1,3 +1,10 @@
+# TODOS
+- make app color palette
+- add standard styling
+- add support for mutual funds && common stock
+- investigate datasets: https://finnhub.io/docs/api/websocket-trades
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

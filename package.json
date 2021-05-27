@@ -5,11 +5,32 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "local": "next build && next start",
+    "test": "jest"
   },
   "dependencies": {
     "next": "10.2.3",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "axios": "^0.21.1",
+    "chart.js": "^3.3.0",
+    "d3": "^6.7.0",
+    "mathjs": "^9.4.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-chartjs-2": "^3.0.3",
+    "react-dom": "^17.0.2",
+    "venn.js": "^0.2.20"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "babel-jest": "^27.0.1",
+    "jest": "^27.0.1",
+    "react-test-renderer": "^17.0.2"
   }
 }
