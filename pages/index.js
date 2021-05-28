@@ -19,7 +19,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Ticker symbols:
+          ETF symbols:
         </p>
 
         <Portfolio />

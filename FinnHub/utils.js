@@ -4,6 +4,16 @@ import {SYMBOL} from "./SearchResult";
 
 const isChar = (variable) => variable.toUpperCase() !== variable.toLowerCase();
 
+export const isPortfolioValid = (portfolio = '') => {
+    portfolio += '';
+    portfolio = portfolio.trim();
+    if (portfolio.length === 0) return false;
+    if (!isChar(portfolio.charAt(0))) return false;
+    if (!isChar(portfolio.charAt(portfolio.length-1))) return false;
+    const regex = new RegExp('[a-zA-Z ,]')
+    return regex.test(portfolio);
+}
+
 export const splitPortfolio = (portfolioString = '') => {
     portfolioString += '';
     portfolioString = portfolioString.trim();
