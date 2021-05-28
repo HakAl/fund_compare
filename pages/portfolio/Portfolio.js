@@ -2,10 +2,10 @@ import React, {Fragment, useEffect, useState} from "react";
 import {filterSearchResults, getAllMatchingHoldings} from "../../FinnHub/utils";
 import {doRequests, getETFHoldingsPath, getSearchPathMap} from "../../FinnHub/network";
 import PortfolioForm from "./PortfolioForm";
-import PortforlioOverview from "./PortfolioOverview";
 import Error from "../util/Error";
 import {SYMBOL, TYPE} from "../../FinnHub/SearchResult";
 import {Type} from "../../FinnHub/Type";
+import MatchingHoldings from "./MatchingHoldings";
 
 const Portfolio = () => {
     const [portfolio, setPortfolio] = useState('');
@@ -58,7 +58,7 @@ const Portfolio = () => {
     }
 
     const formProps = { onSubmitPortfolio, portfolio, setPortfolio }
-    const overviewProps = { matchingHoldings, portfolio, funds }
+    const overviewProps = { matchingHoldings, funds }
     const errorProps = { error, message: "There was a problem loading your portfolio."}
 
     return (
@@ -66,7 +66,7 @@ const Portfolio = () => {
             <Error {...errorProps} />
             {!error && <Fragment>
                 <PortfolioForm {...formProps} />
-                <PortforlioOverview {...overviewProps} />
+                {matchingHoldings && <MatchingHoldings {...overviewProps} />}
             </Fragment>}
         </Fragment>
     );

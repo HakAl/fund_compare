@@ -2,7 +2,7 @@ import {Fragment, useEffect} from "react";
 import React from "react";
 import TopTen from "./TopTen";
 import * as d3 from "d3";
-import {NUMBER_OF_HOLDINGS} from "../../../FinnHub/Fund";
+import {NUMBER_OF_HOLDINGS} from "../../FinnHub/Fund";
 
 const venn = require('venn.js')
 
