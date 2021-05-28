@@ -10,7 +10,10 @@ const PortfolioForm = ({onSubmitPortfolio, portfolio, setPortfolio}) => (
                 value={portfolio}
                 onChange={(e) => setPortfolio(e.target.value)}
             />
-            <button onClick={onSubmitPortfolio}>Submit</button>
+            <button onClick={(event) => {
+                event.preventDefault();
+                onSubmitPortfolio();
+            }}>Submit</button>
         </form>
     </Fragment>
 );

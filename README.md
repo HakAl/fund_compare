@@ -1,6 +1,7 @@
 # TODOS
 - make app color palette
 - add standard styling
+- add translations
 - add support for mutual funds && common stock
 - investigate datasets: https://finnhub.io/docs/api/websocket-trades
 

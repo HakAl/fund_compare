@@ -102,5 +102,6 @@ export const filterSearchResults = (searchPathMapping = {}    , response = []) =
     const allSearchResults = response
         .flatMap(result => result.data.result)
         .filter(result => !result.hasOwnProperty('primary'));
+
     return keys.map(key => (allSearchResults.filter(result => result[SYMBOL] === key.toUpperCase())[0]));
 }

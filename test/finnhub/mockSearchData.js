@@ -1006,3 +1006,400 @@ export const VTI_SEARCH_RESULT = [
         ]
     }
 ];
+
+export const MOCK_SEARCH = {
+    "searchResults": [
+        {
+            "data": {
+                "count": 25,
+                "result": [
+                    {
+                        "description": "VROOM INC",
+                        "displaySymbol": "VRM",
+                        "symbol": "VRM",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "TRAVELZOO",
+                        "displaySymbol": "TZOO",
+                        "symbol": "TZOO",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "VANGUARD S&P 500 ETF",
+                        "displaySymbol": "VOO",
+                        "symbol": "VOO",
+                        "type": "ETP"
+                    },
+                    {
+                        "description": "VANGUARD S&P 500 GROWTH ETF",
+                        "displaySymbol": "VOOG",
+                        "primary": null,
+                        "symbol": "VOOG",
+                        "type": "ETP"
+                    },
+                    {
+                        "description": "VANGUARD S&P 500 VALUE ETF",
+                        "displaySymbol": "VOOV",
+                        "primary": null,
+                        "symbol": "VOOV",
+                        "type": "ETP"
+                    },
+                    {
+                        "description": "Vodafone",
+                        "displaySymbol": "91PQ.L",
+                        "symbol": "91PQ.L",
+                        "type": ""
+                    },
+                    {
+                        "description": "Vodafone",
+                        "displaySymbol": "VO32.L",
+                        "symbol": "VO32.L",
+                        "type": ""
+                    },
+                    {
+                        "description": "Volvo AB",
+                        "displaySymbol": "0MHW.L",
+                        "symbol": "0MHW.L",
+                        "type": ""
+                    },
+                    {
+                        "description": "Vocento ",
+                        "displaySymbol": "0KDD.L",
+                        "symbol": "0KDD.L",
+                        "type": ""
+                    },
+                    {
+                        "description": "Vodafone",
+                        "displaySymbol": "70ZK.L",
+                        "symbol": "70ZK.L",
+                        "type": ""
+                    },
+                    {
+                        "description": "Volvo AB",
+                        "displaySymbol": "0HTP.L",
+                        "symbol": "0HTP.L",
+                        "type": ""
+                    },
+                    {
+                        "description": "VALONEO",
+                        "displaySymbol": "MLVAL.PA",
+                        "symbol": "MLVAL.PA",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "Vonovia SE",
+                        "displaySymbol": "0QFT.L",
+                        "symbol": "0QFT.L",
+                        "type": ""
+                    },
+                    {
+                        "description": "Vossloh AG",
+                        "displaySymbol": "0N2Z.L",
+                        "symbol": "0N2Z.L",
+                        "type": ""
+                    },
+                    {
+                        "description": "Vetoquinol",
+                        "displaySymbol": "0O1O.L",
+                        "symbol": "0O1O.L",
+                        "type": ""
+                    },
+                    {
+                        "description": "TRAVELZOO",
+                        "displaySymbol": "TXM1.MU",
+                        "symbol": "TXM1.MU",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "VALOE OYJ",
+                        "displaySymbol": "7RT.SG",
+                        "symbol": "7RT.SG",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "VMOTO LTD",
+                        "displaySymbol": "O9C.BE",
+                        "symbol": "O9C.BE",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "TRAVELZOO",
+                        "displaySymbol": "TXM1.BE",
+                        "symbol": "TXM1.BE",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "VALOE OYJ",
+                        "displaySymbol": "7RT.BE",
+                        "symbol": "7RT.BE",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "VOGO SACA",
+                        "displaySymbol": "ALVGO.PA",
+                        "symbol": "ALVGO.PA",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "VROOM INC",
+                        "displaySymbol": "VRM*.MX",
+                        "symbol": "VRM*.MX",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "VALOE OYJ",
+                        "displaySymbol": "VALOE.HE",
+                        "symbol": "VALOE.HE",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "VMOTO LTD",
+                        "displaySymbol": "VMT.AX",
+                        "symbol": "VMT.AX",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "TRAVELZOO",
+                        "displaySymbol": "TXM1.F",
+                        "symbol": "TXM1.F",
+                        "type": "Common Stock"
+                    }
+                ]
+            },
+            "status": 200,
+            "statusText": "",
+            "headers": {
+                "content-type": "application/json; charset=utf-8"
+            },
+            "config": {
+                "url": "search?q=voo&token=c2l2dfaad3if2cn5b410",
+                "method": "get",
+                "headers": {
+                    "Accept": "application/json, text/plain, */*"
+                },
+                "baseURL": "https://finnhub.io/api/v1/",
+                "transformRequest": [
+                    null
+                ],
+                "transformResponse": [
+                    null
+                ],
+                "timeout": 10000,
+                "xsrfCookieName": "XSRF-TOKEN",
+                "xsrfHeaderName": "X-XSRF-TOKEN",
+                "maxContentLength": -1,
+                "maxBodyLength": -1
+            },
+            "request": {}
+        },
+        {
+            "data": {
+                "count": 28,
+                "result": [
+                    {
+                        "description": "VALDOR TECHNOLOGY INTERNATIO",
+                        "displaySymbol": "VTI.V",
+                        "symbol": "VTI.V",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "VENTURE INCUBATOR SA",
+                        "displaySymbol": "VTI.WA",
+                        "symbol": "VTI.WA",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "VANGUARD TOTAL STOCK MKT ETF",
+                        "displaySymbol": "VTI",
+                        "symbol": "VTI",
+                        "type": "ETP"
+                    },
+                    {
+                        "description": "VALDOR TECHNOLOGY INTERNATIO",
+                        "displaySymbol": "VTI.NE",
+                        "symbol": "VTI.NE",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "VANGUARD SHORT-TERM TIPS",
+                        "displaySymbol": "VTIP",
+                        "primary": null,
+                        "symbol": "VTIP",
+                        "type": "ETP"
+                    },
+                    {
+                        "description": "VECTOIQ ACQUISITION CO-CL A",
+                        "displaySymbol": "VTIQ",
+                        "primary": [
+                            "VTIQU"
+                        ],
+                        "symbol": "VTIQ",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "AVANTIUM",
+                        "displaySymbol": "AVTXF",
+                        "symbol": "AVTXF",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "NVEST INC",
+                        "displaySymbol": "NVES",
+                        "symbol": "NVES",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "Inventiva",
+                        "displaySymbol": "0RNK.L",
+                        "symbol": "0RNK.L",
+                        "type": ""
+                    },
+                    {
+                        "description": "Voltalia",
+                        "displaySymbol": "0QW7.L",
+                        "symbol": "0QW7.L",
+                        "type": ""
+                    },
+                    {
+                        "description": "Volati AB",
+                        "displaySymbol": "0RLD.L",
+                        "symbol": "0RLD.L",
+                        "type": ""
+                    },
+                    {
+                        "description": "AVANTIUM",
+                        "displaySymbol": "27V.BE",
+                        "symbol": "27V.BE",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "AVANTIUM",
+                        "displaySymbol": "27V.F",
+                        "symbol": "27V.F",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "AVANTIUM",
+                        "displaySymbol": "27V.SW",
+                        "symbol": "27V.SW",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "Vetoquinol",
+                        "displaySymbol": "0O1O.L",
+                        "symbol": "0O1O.L",
+                        "type": ""
+                    },
+                    {
+                        "description": "AVANTIUM",
+                        "displaySymbol": "27V.MU",
+                        "symbol": "27V.MU",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "Avantium NV",
+                        "displaySymbol": "0RNP.L",
+                        "symbol": "0RNP.L",
+                        "type": ""
+                    },
+                    {
+                        "description": "Verimatrix",
+                        "displaySymbol": "0QAU.L",
+                        "symbol": "0QAU.L",
+                        "type": ""
+                    },
+                    {
+                        "description": "AVANTIUM",
+                        "displaySymbol": "27V.DU",
+                        "symbol": "27V.DU",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "AVANTIUM",
+                        "displaySymbol": "AVTX.AS",
+                        "symbol": "AVTX.AS",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "AVANTIUM",
+                        "displaySymbol": "27V.SG",
+                        "symbol": "27V.SG",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "VOLATI AB",
+                        "displaySymbol": "VOLO.ST",
+                        "symbol": "VOLO.ST",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "VITKOVICE",
+                        "displaySymbol": "VIKV.PR",
+                        "symbol": "VIKV.PR",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "VOLATI AB",
+                        "displaySymbol": "0RKK.L",
+                        "symbol": "0RKK.L",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "VOLATI AB",
+                        "displaySymbol": "VOG.F",
+                        "symbol": "VOG.F",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "Avantor Inc",
+                        "displaySymbol": "AVTR.PRA",
+                        "symbol": "AVTR.PRA",
+                        "type": ""
+                    },
+                    {
+                        "description": "AVNET INC",
+                        "displaySymbol": "VNI.SW",
+                        "symbol": "VNI.SW",
+                        "type": "Common Stock"
+                    },
+                    {
+                        "description": "AVNET INC",
+                        "displaySymbol": "VNI.F",
+                        "symbol": "VNI.F",
+                        "type": "Common Stock"
+                    }
+                ]
+            },
+            "status": 200,
+            "statusText": "",
+            "headers": {
+                "content-type": "application/json; charset=utf-8"
+            },
+            "config": {
+                "url": "search?q=vti&token=c2l2dfaad3if2cn5b410",
+                "method": "get",
+                "headers": {
+                    "Accept": "application/json, text/plain, */*"
+                },
+                "baseURL": "https://finnhub.io/api/v1/",
+                "transformRequest": [
+                    null
+                ],
+                "transformResponse": [
+                    null
+                ],
+                "timeout": 10000,
+                "xsrfCookieName": "XSRF-TOKEN",
+                "xsrfHeaderName": "X-XSRF-TOKEN",
+                "maxContentLength": -1,
+                "maxBodyLength": -1
+            },
+            "request": {}
+        }
+    ],
+    "searchPathMap": {
+        "search?q=voo&token=c2l2dfaad3if2cn5b410": "voo",
+        "search?q=vti&token=c2l2dfaad3if2cn5b410": "vti"
+    }
+}

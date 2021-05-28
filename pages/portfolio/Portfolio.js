@@ -1,63 +1,55 @@
-import React from "react";
-import {Fragment, useState} from "react";
-import {filterSearchResults, getAllMatchingHoldings, splitPortfolio} from "../../FinnHub/utils";
-import {getETFHoldingsPath, instance, searchBySymbol} from "../../FinnHub/network";
+import React, {Fragment, useEffect, useState} from "react";
+import {filterSearchResults, getAllMatchingHoldings} from "../../FinnHub/utils";
+import {doRequests, getETFHoldingsPath, getSearchPathMap} from "../../FinnHub/network";
 import PortfolioForm from "./PortfolioForm";
 import PortforlioOverview from "./PortfolioOverview";
+import Error from "../util/Error";
 import {SYMBOL, TYPE} from "../../FinnHub/SearchResult";
 import {Type} from "../../FinnHub/Type";
 
 const Portfolio = () => {
     const [portfolio, setPortfolio] = useState('');
+    const [searchPathMap, setSearchPathMap] = useState(undefined);
+    const [searchResults, setSearchResults] = useState(undefined);
     const [portfolioResults, setPortfolioResults] = useState(undefined);
     const [error, setError] = useState(undefined);
     const [funds, setFunds] = useState(undefined);
 
+    const fundLookupListener = () => {
+        if (!portfolioResults) return;
 
-    const onSubmitPortfolio = (event) => {
-        setError(undefined);
-        event.preventDefault();
-        const splitPortfolioArray = splitPortfolio(portfolio);
-        if (splitPortfolioArray && splitPortfolioArray.length > 0) {
-            // todo::  search each symbol here to determine type of holding
-            const searchPathMapping = {};
-            const searchPaths = splitPortfolioArray.map(
-                (symbol) => {
-                    const path = searchBySymbol(symbol)
-                    searchPathMapping[path] = symbol;
-                    return path;
-                }
-            )
-
-            let result = undefined;
-            Promise
-                .all(searchPaths.map(path => instance.get(path)))
-                .then((response) => {
-                    let success = true;
-                    success = response.map(response => response.status === 200);
-                    if (success) {
-                        return filterSearchResults(searchPathMapping, response);
-                    } else {
-                        setError(true);
-                    }
-                }).then((parsedSearchResults) => {
-                    const fundPaths = parsedSearchResults.map(
-                        (fund) => fund[TYPE] === Type.ETF ? getETFHoldingsPath(fund[SYMBOL]) : false
-                    );
-                    Promise.all(
-                        fundPaths.map(path => instance.get(path))
-                    ).then((results) => {
-                        let success = true;
-                        success = results.map(response => response.status === 200);
-                        if (success) {
-                            const resultFunds = results.map(response => response.data);
-                            setFunds(resultFunds);
-                        } else {
-                            setError(true);
-                        }
-                    })
-            })
+        let success = true;
+        success = portfolioResults.map(response => response.status === 200);
+        if (success) {
+            const resultFunds = portfolioResults.map(response => response.data);
+            setFunds(resultFunds);
+        } else {
+            setError(true);
         }
+    }
+    useEffect(() => fundLookupListener(), [portfolioResults]);
+
+    const portfolioSearchListener = () => {
+        if (!searchResults || !searchPathMap) {
+            return;
+        }
+        const filtered = filterSearchResults(searchPathMap, searchResults);
+        // todo: support stocks and mutual funds
+        const fundPaths = filtered.map(
+            (fund) => fund[TYPE] === Type.ETF
+                ? getETFHoldingsPath(fund[SYMBOL])
+                : false
+        );
+        doRequests(fundPaths, setPortfolioResults);
+    }
+    useEffect(() => portfolioSearchListener(), [searchPathMap, searchResults]);
+
+    const onSubmitPortfolio = () => {
+        setError(undefined);
+        const temp = getSearchPathMap(portfolio)
+        setSearchPathMap(temp)
+        const paths = Object.keys(temp);
+        doRequests(paths, setSearchResults)
     }
 
     let matchingHoldings = undefined;
@@ -67,10 +59,11 @@ const Portfolio = () => {
 
     const formProps = { onSubmitPortfolio, portfolio, setPortfolio }
     const overviewProps = { matchingHoldings, portfolio, funds }
+    const errorProps = { error, message: "There was a problem loading your portfolio."}
 
     return (
         <Fragment>
-            {error && <Fragment>There was a problem loading your portfolio.</Fragment>}
+            <Error {...errorProps} />
             {!error && <Fragment>
                 <PortfolioForm {...formProps} />
                 <PortforlioOverview {...overviewProps} />
